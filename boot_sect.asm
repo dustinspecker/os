@@ -1,6 +1,4 @@
-; A simple boot sector program that loops forever
-loop:
-	jmp loop
+jmp $ ; infinite loop
 
 ; fill remaining 510 bytes with 0
 times 510-($-$$) db 0
