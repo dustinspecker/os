@@ -1,8 +1,7 @@
+[org 0x7c00] ; start memory access at start of boot sector
 mov ah, 0x0e ; use tty mode
 
-mov bx, the_secret
-add bx, 0x7c00
-mov al, [bx]
+mov al, [the_secret]
 int 0x10
 
 jmp $ ; infinite loop
